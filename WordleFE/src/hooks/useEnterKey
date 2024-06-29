@@ -1,0 +1,30 @@
+import { useEffect, useState} from 'react'
+
+function useEnterKey() {
+
+    const [ isPressed, setIsPressed ] = useState(false)
+
+    useEffect(() => {
+        const handleKeyDown = (event) => {
+            if (event.key === 'Enter') {
+                setIsPressed(true)
+            }
+        }
+
+        const handleKeyUp = (event) => {
+            if (event.key === 'Enter') {
+                setIsPressed(false)
+            }
+        }
+        
+        window.addEventListener('keydown', handleKeyDown)
+        window.addEventListener('keyup', handleKeyUp)
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown)
+            window.removeEventListener('keyup', handleKeyUp)
+        }
+    }, [isPressed])
+
+    return isPressed
+}
+export default useEnterKey

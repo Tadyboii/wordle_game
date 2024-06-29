@@ -1,0 +1,13 @@
+#root{
+    margin: 0px;
+    /* overflow: hidden; */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.wordle-home {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,43 @@
+import { useState, useEffect } from 'react';
+
+function useTypeLogic(isActive) {
+
+    const [typedLetters, setLetters] = useState([]);
+    const [canSubmit, setCanSubmit] = useState(false);
+
+    useEffect(() => {
+        const handleKeyDown = (event) => {
+            if (!isActive) return;
+
+            if (event.key.match(/^[a-zA-Z]$/) && event.key.length === 1) {
+                setLetters(currentLetters => {
+                    if (currentLetters.length < 5) {
+                        if (currentLetters.length === 4) {
+                            setCanSubmit(true);
+                        }
+                        return [...currentLetters, event.key.toUpperCase()];
+                    }
+                    return currentLetters;
+                });
+            } else if (event.key === 'Backspace') {
+                setCanSubmit(false);
+                setLetters(currentLetters => currentLetters.slice(0, -1));
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+        };
+    }, [isActive]);
+
+    const resetLetters = () => {
+        setLetters([]);
+        setCanSubmit(false);
+    };
+
+    return { typedLetters, resetLetters, canSubmit };
+}
+
+export default useTypeLogic;

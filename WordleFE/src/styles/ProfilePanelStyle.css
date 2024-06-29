@@ -1,0 +1,85 @@
+.profile-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+}
+.profile-panel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 525px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+
+.login-area{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.login-button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 250px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.google-logo{
+    width: 40px;
+    height: 36px;
+    margin-left: 6px;
+}
+.login-text{
+    font-size: 15px;
+    margin-left: 25px;
+}
+
+
+
+.player-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid white;
+    width: 280px;
+    height: 400px;
+    margin-top: 10px;
+    color: white;
+    font-family: sans-serif;
+    border-radius: 5px;
+}
+.player-image{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-top: 100px;
+}
+.player-name{
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+.logout-button{
+    width: 270px;
+    height: 19px;
+    background-color: black;
+    color: white;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 80px;
+}

@@ -1,0 +1,40 @@
+.wordle-area{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-evenly;
+}
+.word-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+.word-block{
+    display: inline-flex;
+    flex-direction: row;
+    gap: 2px;
+}
+.letter-block{
+    width: 55px;
+    height: 55px;
+    background-color: hsl(0, 0%, 0%);
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.letter{
+    color: white;
+    font-size: 50px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+
+}
+
+.current-score{
+    color: white;
+    font-family: sans-serif;
+}

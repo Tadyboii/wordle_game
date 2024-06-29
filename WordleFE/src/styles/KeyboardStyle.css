@@ -1,0 +1,36 @@
+.keyboard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    background-color: rgb(0, 0, 0);
+}
+.keyboard-row{
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+}
+.keyboard-key{
+    width: 55px;
+    height: 55px;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+.keyboard-key.active, .keyboard-key:active{
+    background-color: white;
+    border: 1px solid black;
+    color: black
+}
+
+.special-key{
+    width: 110px;
+}
